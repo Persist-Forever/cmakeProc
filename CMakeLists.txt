@@ -1,0 +1,22 @@
+cmake_minimum_required(VERSION 3.0.0)
+project(getestProc VERSION 0.1.0)
+
+include(CTest)
+enable_testing()
+
+MESSAGE(STATUS "This is BINARY dir " ${PROJECT_BINARY_DIR})
+MESSAGE(STATUS "This is SOURCE dir "${PROJECT_SOURCE_DIR})
+
+SET(CMAKE_CXX_FLAGES "-Wno-deprecated-declarations")
+SET(CMAKE_CXX_STANDARD 17)
+
+set(CPACK_PROJECT_NAME ${PROJECT_NAME})
+set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
+set(INCLUDE ${CMAKE_SOURCE_DIR}/include)
+
+ADD_COMPILE_OPTIONS("-g")
+ADD_COMPILE_OPTIONS("-Wall")
+
+ADD_SUBDIRECTORY(src)
+ADD_SUBDIRECTORY(main)
+
