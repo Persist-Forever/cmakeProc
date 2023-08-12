@@ -1,5 +1,6 @@
-aux_source_directory(. SRC_LIST)
+add_subdirectory(study_gtest)
 
+# aux_source_directory(. SRC_LIST)
 
 # add_library(src-dltest-object OBJECT $(SRC_LIST))
 
